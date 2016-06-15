@@ -2,5 +2,11 @@
     <wb-module deploy-name="building-project-ear">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="building-project-web.war" deploy-path="/" handle="module:/resource/building-project-web/building-project-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="building-project-ejb.jar" deploy-path="/" handle="module:/resource/building-project-ejb/building-project-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

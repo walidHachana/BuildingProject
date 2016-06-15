@@ -10,13 +10,4 @@
   <module>
     <ejb>building-project-ejb.jar</ejb>
   </module>
-  <module>
-        <web>
-            <web-uri>crud-web.war</web-uri>   
-            <context-root>/crud</context-root>
-        </web>
-    </module>
-  <module>
-    <ejb>crud-entity.jar</ejb>
-  </module>
 </application>
