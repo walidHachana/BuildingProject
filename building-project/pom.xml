@@ -92,5 +92,6 @@
     <module>building-project-ejb</module>
     <module>building-project-web</module>
     <module>building-project-ear</module>
+    <module>building-client</module>
   </modules>
 </project>

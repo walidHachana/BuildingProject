@@ -2,18 +2,14 @@ package entities;
 
 	import java.io.Serializable;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
 
 
 	@Entity
-	@Table(name = "Challenge")
 
 	public class Challenge implements Serializable {
 
@@ -22,7 +18,7 @@ import javax.persistence.Table;
 	private int idChallenge;
 	private String designation; 
 	private int year ; 
-    private Categorie categorie;
+    private String categorie;
     
 	
     
@@ -66,15 +62,15 @@ import javax.persistence.Table;
 
 
 
-	@ManyToOne(cascade = CascadeType.MERGE)
-	public Categorie getCategorie() {
+	
+	public String getCategorie() {
 		return categorie;
 	}
 
 
 
 
-	public void setCategorie(Categorie categorie) {
+	public void setCategorie(String categorie) {
 		this.categorie = categorie;
 	}
 
@@ -86,7 +82,7 @@ import javax.persistence.Table;
 	}
 
 	public Challenge(int idChallenge, String designation, int year,
-			Categorie categorie) {
+			String categorie) {
 		super();
 		this.idChallenge = idChallenge;
 		this.designation = designation;
@@ -97,6 +93,11 @@ import javax.persistence.Table;
 	public Challenge() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Challenge [designation=" + designation + ", year=" + year + ", categorie=" + categorie + "]";
 	}
 
 
